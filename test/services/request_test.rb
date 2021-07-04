@@ -7,7 +7,7 @@ class ApiSalesLoftRequest < ActiveSupport::TestCase
                               uri: "#{config.api_url}/people.json",
                               token: config.auth_token)
     response = request.call
-    assert_equal "200", response.code
-    assert_equal "OK", response.message
+    assert response.content[:data]
+    assert_equal "200", response.status_code
   end
 end

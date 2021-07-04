@@ -37,7 +37,7 @@ module ApiSalesloft
       response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
         http.request(request)
       end
-      response
+      Response.new(response)
     end
 
     private
