@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
-# require 'salesloft/version'
-# require 'json'
+require 'json'
 require 'net/http'
 require 'api_salesloft/configuration'
-require 'api_salesloft/client'
 require 'api_salesloft/request'
 require 'api_salesloft/response'
+require 'api_salesloft/client'
 require 'pry'
-
 
 module ApiSalesloft
   class Error < StandardError; end
@@ -23,5 +21,9 @@ module ApiSalesloft
 
   def self.configure
     yield(configuration)
+  end
+
+  def self.client(token)
+    Client.new(auth_token: token)
   end
 end

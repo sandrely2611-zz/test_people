@@ -11,7 +11,7 @@ module ApiSalesloft
     end
 
     def successful?
-      http_response.is_a?(Net::HTTPSuccess) && error.empty?
+      http_response.is_a?(Net::HTTPSuccess) && errors.empty?
     end
 
     def status_code

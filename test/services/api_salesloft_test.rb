@@ -6,7 +6,7 @@ class ApiSalesLoftService < ActiveSupport::TestCase
   end
 
   test 'ApiSaloft configuration' do
-    config = ApiSalesloft::Configuration.new
+    config = ApiSalesloft.configuration
     assert config.api_url
     assert config.auth_token
   end
