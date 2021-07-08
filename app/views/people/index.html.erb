@@ -1,0 +1,24 @@
+<h1>Salesloft people</h1>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Email </th>
+    <th> Job Position </th>
+  </tr>
+  <% @people.each do |person| %>
+    <% p = PersonDecorator.new(person) %>
+    <tr>
+      <td>
+        <span> <%= p.name  %> s</span>
+      </td>
+      <td>
+        <span> <%= p.email  %> s</span>
+      </td>
+      <td>
+        <span> <%= p.job_position  %> s</span>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
