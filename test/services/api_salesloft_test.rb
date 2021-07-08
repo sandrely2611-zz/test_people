@@ -33,4 +33,3 @@ class ApiSalesLoftService < ActiveSupport::TestCase
     assert_equal "200", client.list_people.status_code
   end
 end
-
