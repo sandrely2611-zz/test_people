@@ -1,0 +1,21 @@
+<h1>Salesloft people's email by characters</h1>
+
+<%= link_to :back, root_path %>
+
+<table>
+  <tr>
+    <th> Character </th>
+    <th> Count </th>
+  </tr>
+  <% @list.each do |key, value| %>
+    <tr>
+      <td>
+        <span> <%= key  %></span>
+      </td>
+      <td>
+        <span> <%= value %></span>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
