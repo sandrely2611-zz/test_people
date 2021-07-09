@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'people#index'
 
   resources :characters, only: %i[index]
+  resources :duplicated_emails, only: %i[index]
 end
