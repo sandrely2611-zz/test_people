@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hey there! 
 
-Things you may want to cover:
+In order to have this project setup and running do as follow:
 
-* Ruby version
+### Development
 
-* System dependencies
+```
+$ bundle install
+$ bin/rake db:setup
+$ bin/rails server
+```
 
-* Configuration
 
-* Database creation
+### Test
 
-* Database initialization
+This project uses Minitest for testing.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails test
+```
