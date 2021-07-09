@@ -1,0 +1,21 @@
+<h1>Salesloft people's duplicated emails </h1>
+
+<%= link_to :back, root_path %>
+
+<table>
+  <tr>
+    <th> Reference email </th>
+    <th> Possible duplicated emails </th>
+  </tr>
+  <% @list.each do |key, value| %>
+    <tr>
+      <td>
+        <span> <%= key  %></span>
+      </td>
+      <td>
+        <span> <%= value %></span>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
