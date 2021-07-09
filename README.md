@@ -12,6 +12,16 @@ $ bin/rake db:setup
 $ bin/rails server
 ```
 
+### Env variables
+
+To setup the variables the master.key is required. 
+Inside the credentials.yml.enc are two values:
+
+```
+api_salesloft:
+  api_url: xxx
+  auth_token: xxx
+```
 
 ### Test
 
