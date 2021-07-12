@@ -1,27 +1,33 @@
-<h1>Salesloft people</h1>
+<h1 class="mb-4">Salesloft people</h1>
 
-<%= link_to "Character counter", characters_path %>
-<%= link_to "Duplicated emails", duplicated_emails_path %>
-
-<table>
-  <tr>
-    <th> Name </th>
-    <th> Email </th>
-    <th> Job Position </th>
-  </tr>
-  <% @people.each do |person| %>
-    <% p = PersonDecorator.new(person) %>
-    <tr>
-      <td>
-        <span> <%= p.name  %> s</span>
-      </td>
-      <td>
-        <span> <%= p.email  %> s</span>
-      </td>
-      <td>
-        <span> <%= p.job_position  %> s</span>
-      </td>
-    </tr>
-  <% end %>
-</table>
-
+<div class="overflow-x-auto">
+  <div class="align-middle inline-block min-w-full">
+    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Name</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Email</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Job Position</th>
+        </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+        <% @people.each do |person| %>
+          <% p = PersonDecorator.new(person) %>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span> <%= p.name %> s</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span> <%= p.email %> s</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span> <%= p.job_position %> s</span>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
