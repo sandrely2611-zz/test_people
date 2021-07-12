@@ -1,21 +1,28 @@
-<h1>Salesloft people's duplicated emails </h1>
+<h1 class="mb-4">Salesloft people's duplicated emails</h1>
 
-<%= link_to :back, root_path %>
-
-<table>
-  <tr>
-    <th> Reference email </th>
-    <th> Possible duplicated emails </th>
-  </tr>
-  <% @list.each do |key, value| %>
-    <tr>
-      <td>
-        <span> <%= key  %></span>
-      </td>
-      <td>
-        <span> <%= value %></span>
-      </td>
-    </tr>
-  <% end %>
-</table>
-
+<div class="overflow-x-auto">
+  <div class="align-middle inline-block min-w-full">
+    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Reference email</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Possible duplicated emails</th>
+        </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+        <% @list.each do |key, value| %>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span> <%= key %></span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span> <%= value %></span>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
